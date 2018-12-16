@@ -3,7 +3,7 @@
  */
 
 const app = require("./app");
-const debug = require("debug")("gsg-for-better:server");
+const debug = require("debug")("gfb");
 const http = require("http");
 
 /**

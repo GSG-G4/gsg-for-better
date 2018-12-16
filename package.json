@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cd server && node ./server",
-    "server:dev": "cd server && nodemon ./server"
+    "start": "cd server && DEBUG=gfb node ./server",
+    "server:dev": "cd server && DEBUG=gfb nodemon ./server"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
