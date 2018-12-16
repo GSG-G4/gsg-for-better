@@ -1,7 +1,7 @@
 {
   "name": "gsg-for-better",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "cd server && DEBUG=gfb node ./server",
     "server:dev": "cd server && DEBUG=gfb nodemon ./server"
