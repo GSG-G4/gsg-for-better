@@ -4,6 +4,11 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 var favicon = require("serve-favicon")
 
+// load .env only on development
+if (!process.env.TRAVIS && !process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 const controllers = require("./controllers");
 const errorHandler = require("./errors/error_handler")
 const app = express();

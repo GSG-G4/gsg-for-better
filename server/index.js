@@ -6,6 +6,8 @@ const app = require("./app");
 const debug = require("debug")("gfb");
 const http = require("http");
 
+const dbConnection = require("./database/db_connection");
+
 /**
  * Get port from environment and store in Express.
  */
@@ -62,6 +64,14 @@ onListening = () => {
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on("error", onError);
-server.on("listening", onListening);
+dbConnection()
+  .then((connection) => {
+    console.info('connected to', connection.connections[0].name, 'db on',connection.connections[0].host);
+    // start the server after establish the connection
+    server.listen(port);
+    server.on("error", onError);
+    server.on("listening", onListening);
+  })
+  .catch((err) => {
+    debug("fail to connect to db", err);
+  });
