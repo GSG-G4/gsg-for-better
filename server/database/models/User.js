@@ -7,10 +7,12 @@ const { Schema } = mongoose;
 const UserSchema = new Schema({
   githubHandler: {
     type: String,
+    unique: true,
     required: true,
   },
   email: {
     type: String,
+    unique: true,
     required: true,
   },
   role: {
@@ -18,7 +20,7 @@ const UserSchema = new Schema({
     default: 'guest',
   },
   profileImage: String,
-  teamId: {
+  team: {
     type: Schema.Types.ObjectId,
     ref: 'teams',
   }
