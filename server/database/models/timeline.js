@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { model, Schema } = require('mongoose');
 
 // Timeline Schema
 // Defines how to store weeks info for the timeline
@@ -19,4 +18,4 @@ const TimelineSchema = new Schema({
   }],
 });
 
-module.exports = Timeline = mongoose.model('timelines', TimelineSchema);
+module.exports = Timeline = model('timelines', TimelineSchema);

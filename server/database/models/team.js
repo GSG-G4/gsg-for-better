@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { model, Schema } = require('mongoose');
 
 // Team Schema
 // Defines how to store teams info which should be done by the admin
@@ -12,4 +11,4 @@ const TeamSchema = new Schema({
   }],
 });
 
-module.exports = Team = mongoose.model('teams', TeamSchema);
+module.exports = Team = model('teams', TeamSchema);

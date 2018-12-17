@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { model, Schema } = require('mongoose');
 
 // StagedAction Schema
 // Defines how to store stagedActions from members against proposedGoals and projects (edit, delete)
@@ -21,4 +20,4 @@ const StagedActionSchema = new Schema({
   }
 });
 
-module.exports = StagedAction = mongoose.model('stagedactions', StagedActionSchema);
+module.exports = StagedAction = model('stagedActions', StagedActionSchema);

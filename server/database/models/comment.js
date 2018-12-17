@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { model, Schema } = require('mongoose');
 
 // Comment Schema
 // Defines how to store Comments on each tech from guests(mentors) and replies to them
@@ -27,4 +26,4 @@ const CommentSchema = new Schema({
   },
 });
 
-module.exports = Comment = mongoose.model('comments', CommentSchema);
+module.exports = Comment = model('comments', CommentSchema);

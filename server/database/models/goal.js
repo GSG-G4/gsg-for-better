@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { model, Schema } = require('mongoose');
 
 // Goal Schema
 // Defines how to store Goals info
@@ -15,4 +14,4 @@ const GoalSchema = new Schema({
   },
 });
 
-module.exports = Goal = mongoose.model('goals', GoalSchema);
+module.exports = Goal = model('goals', GoalSchema);

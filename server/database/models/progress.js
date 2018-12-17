@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { model, Schema } = require('mongoose');
 
 // Progress Schema
 // Defines how to store each memeber progress against each goal
@@ -16,4 +15,4 @@ const ProgressSchema = new Schema({
   },
 });
 
-module.exports = Progress = mongoose.model('progresses', ProgressSchema);
+module.exports = Progress = model('progresses', ProgressSchema);

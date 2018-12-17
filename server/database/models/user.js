@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { model, Schema } = require('mongoose');
 
 // User Schema
 // Defines how to store users info that mostly should come from github
@@ -26,4 +25,4 @@ const UserSchema = new Schema({
   }
 });
 
-module.exports = User = mongoose.model('users', UserSchema);
+module.exports = User = model('users', UserSchema);

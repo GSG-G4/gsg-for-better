@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { model, Schema } = require('mongoose');
 
 // Project Schema
 // Defines how to store projects info
@@ -24,4 +23,4 @@ const ProjectSchema = new Schema({
   }],
 });
 
-module.exports = Project = mongoose.model('projects', ProjectSchema);
+module.exports = Project = model('projects', ProjectSchema);

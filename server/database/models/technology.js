@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { model, Schema } = require('mongoose');
 
 // Technology Schema
 // Defines how to store the technologies
@@ -16,4 +15,4 @@ const TechnologySchema = new Schema({
   }],
 });
 
-module.exports = Technology = mongoose.model('technologies', TechnologySchema);
+module.exports = Technology = model('technologies', TechnologySchema);
