@@ -21,13 +21,13 @@ app.use(cookieParser());
 app.use(controllers);
 
 // serve static files 
- app.use(express.static(path.join(__dirname,"..", "client", "build")));
- app.use(favicon(path.join(__dirname,"..", "client", "build", "favicon.ico")))
+app.use(express.static(path.join(__dirname,"..", "client", "build")));
+app.use(favicon(path.join(__dirname,"..", "client", "build", "favicon.ico")))
 
 //  handle all requests
- app.get("*", (_req, res) => {
+app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname,"..", "client", "build", "index.html"));
- });
+});
 
 // error handler
 app.use(errorHandler);
