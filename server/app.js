@@ -3,6 +3,11 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
+// load .env only on development
+if (!process.env.TRAVIS && !process.env.ENV !== 'production') {
+  require('dotenv').config();
+}
+
 const controllers = require("./controllers");
 const errorHandler = require("./errors/error_handler")
 const app = express();
