@@ -4,7 +4,8 @@
   "private": false,
   "scripts": {
     "start": "cd server && cross-env DEBUG=gfb node ./index",
-    "server:dev": "cd server && cross-env DEBUG=gfb nodemon ./index"
+    "server:dev": "cd server && cross-env DEBUG=gfb nodemon ./index",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -18,7 +19,8 @@
     "joi": "^14.3.0",
     "mongoose": "^5.4.0",
     "morgan": "~1.9.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "cross-env": "^5.2.0"
   },
   "devDependencies": {
     "codecov": "^3.1.0",

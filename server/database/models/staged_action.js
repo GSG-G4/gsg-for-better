@@ -17,7 +17,9 @@ const StagedActionSchema = new Schema({
   categoryId: {
     type: Schema.Types.ObjectId,
     refPath: 'category',
-  }
+  },
 });
 
-module.exports = StagedAction = model('stagedActions', StagedActionSchema);
+const StagedAction = model('stagedActions', StagedActionSchema);
+
+module.exports = StagedAction;

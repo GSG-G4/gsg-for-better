@@ -15,4 +15,6 @@ const TechnologySchema = new Schema({
   }],
 });
 
-module.exports = Technology = model('technologies', TechnologySchema);
+const Technology = model('technologies', TechnologySchema);
+
+module.exports = Technology;
