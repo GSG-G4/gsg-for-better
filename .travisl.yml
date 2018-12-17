@@ -6,6 +6,6 @@ env:
  - BUILD_DIR = client
  - BUILD_DIR = server
 
- script:
+script:
   - if ["$BUILD_DIR" = "client"]; then cd $BUILD_DIR && npm install && npm test; fi
   - if ["$BUILD_DIR" = "server"]; then cd $BUILD_DIR && npm install && npm test; fi
