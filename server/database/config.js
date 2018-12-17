@@ -1,4 +1,4 @@
-let { MONGOURI: mongoURI } = process.env;
+let { MONGO_URI: mongoURI } = process.env;
 
 if (process.env.NODE_ENV === 'test') {
   // change MONGOURI to testDBurl
