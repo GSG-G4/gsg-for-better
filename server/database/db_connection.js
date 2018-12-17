@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // load .env only on development
-if (!process.env.TRAVIS || !process.env.ENV !== 'production') {
+if (!process.env.TRAVIS && !process.env.ENV !== 'production') {
   require('dotenv').config()
 }
 
@@ -13,7 +13,7 @@ const dbConnection = () => {
     mongoURI = process.env.MONGOURI_TEST; 
   }
   // create DB connection
-  mongoose.connect(
+  return mongoose.connect(
     mongoURI,
     { useNewUrlParser: true }
   );
