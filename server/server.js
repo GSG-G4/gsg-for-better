@@ -23,7 +23,7 @@ const server = http.createServer(app);
  * Event listener for HTTP server "error" event.
  */
 
-onError = (error) => {
+onError = error => {
   if (error.syscall !== "listen") {
     throw error;
   }
