@@ -15,7 +15,10 @@ const dbConnection = () => {
   // create DB connection
   return mongoose.connect(
     mongoURI,
-    { useNewUrlParser: true }
+    { 
+      useNewUrlParser: true,
+      useCreateIndex: true,
+    }
   );
 }
 
