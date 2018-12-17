@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const controllers = require("./controllers");
-const errorHandle = require("./errors/error_handler")
+const errorHandler = require("./errors/error_handler")
 const app = express();
 
 app.use(logger("dev"));
@@ -26,6 +26,6 @@ app.use(controllers);
 */ 
 
 // error handler
-app.use(errorHandle);
+app.use(errorHandler);
 
 module.exports = app;

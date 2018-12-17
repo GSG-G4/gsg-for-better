@@ -1,6 +1,6 @@
-errorHandle = (err, req, res, next) => {
+errorHandler = (err, req, res, next) => {
   res.status(err.status || 500);
   res.json(err);
 };
 
-module.exports = errorHandle;
+module.exports = errorHandler;
