@@ -5,7 +5,11 @@ const Schema = mongoose.Schema;
 // Defines how to store the technologies
 
 const TechnologySchema = new Schema({
-  name: String,
+  name: {
+    type: String,
+    unique: true,
+    required: true,
+  },
   image: String,
   resources: [{
     type: String,

@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 const StagedActionSchema = new Schema({
   action: String,
-  description: String,
+  description: {},
   users: [{
     type: Schema.Types.ObjectId,
     ref: 'users',
