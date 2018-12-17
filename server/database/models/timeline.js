@@ -18,4 +18,6 @@ const TimelineSchema = new Schema({
   }],
 });
 
-module.exports = Timeline = model('timelines', TimelineSchema);
+const Timeline = model('timelines', TimelineSchema);
+
+module.exports = Timeline;

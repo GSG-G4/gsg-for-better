@@ -15,4 +15,6 @@ const ProgressSchema = new Schema({
   },
 });
 
-module.exports = Progress = model('progresses', ProgressSchema);
+const Progress = model('progresses', ProgressSchema);
+
+module.exports = Progress;

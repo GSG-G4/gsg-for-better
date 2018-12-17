@@ -22,7 +22,9 @@ const UserSchema = new Schema({
   team: {
     type: Schema.Types.ObjectId,
     ref: 'teams',
-  }
+  },
 });
 
-module.exports = User = model('users', UserSchema);
+const User = model('users', UserSchema);
+
+module.exports = User;

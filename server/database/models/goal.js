@@ -14,4 +14,6 @@ const GoalSchema = new Schema({
   },
 });
 
-module.exports = Goal = model('goals', GoalSchema);
+const Goal = model('goals', GoalSchema);
+
+module.exports = Goal;

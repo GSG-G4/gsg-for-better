@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const { model, Schema } = mongoose;
 
 // Comment Schema
@@ -11,7 +12,7 @@ const CommentSchema = new Schema({
     default: Date.now,
   },
   subComments: [{
-    _id: { default: mongoose.Types.ObjectId(), type:Schema.Types.ObjectId },
+    _id: { default: mongoose.Types.ObjectId(), type: Schema.Types.ObjectId },
     description: String,
     createdAt: {
       type: Date,
@@ -32,4 +33,5 @@ const CommentSchema = new Schema({
   },
 });
 
-module.exports = Comment = model('comments', CommentSchema);
+const Comment = model('comments', CommentSchema);
+module.exports = Comment;
