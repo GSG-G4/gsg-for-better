@@ -1,5 +1,8 @@
 module.exports = {
   "extends": "airbnb-base",
+  "env": {
+    "jest": true
+  },
   "rules": {
     // disables the windows/unix linebreak checks.
     "linebreak-style": 0,
