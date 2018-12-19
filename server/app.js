@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const favicon = require('serve-favicon');
+const favicon = require('express-favicon');
 
 // load .env only on development
 if (!process.env.TRAVIS && !process.env.NODE_ENV !== 'production') {

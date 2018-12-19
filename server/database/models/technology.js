@@ -11,7 +11,12 @@ const TechnologySchema = new Schema({
   },
   image: String,
   resources: [{
-    type: String,
+    text: {
+      type: String,
+    },
+    url: {
+      type: String,
+    },
   }],
 });
 
