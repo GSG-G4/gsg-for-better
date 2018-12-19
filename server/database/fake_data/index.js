@@ -18,7 +18,7 @@ const build = () => {
       mongoose.disconnect();
     })
     .catch((err) => {
-      debug(`Error with connection with DB: \n ${err}`);
+      debug(`Error with connection with inserting fake data: \n ${err}`);
     });
 };
 
