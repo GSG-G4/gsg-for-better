@@ -4,6 +4,7 @@ const debug = require('debug')('database');
 
 const resetFakeData = require('./delete_fake_data');
 const technologyFakeData = require('./technology');
+const teamFakeData = require('./team');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const dbConnection = require('./../db_connection');
@@ -13,6 +14,7 @@ const build = () => {
     .then(async () => {
       await resetFakeData();
       await technologyFakeData();
+      await teamFakeData();
     })
     .then(() => {
       mongoose.disconnect();
