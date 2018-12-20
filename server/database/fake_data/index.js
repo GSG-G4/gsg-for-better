@@ -8,22 +8,25 @@ const technologyFakeData = require('./technology');
 require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const dbConnection = require('./../db_connection');
 
-const build = () => {
+const build = () => new Promise((resolve, reject) => {
   dbConnection()
     .then(async () => {
       await resetFakeData();
       await technologyFakeData();
     })
-    .then(() => {
-      mongoose.disconnect();
-    })
+    .then(resolve)
     .catch((err) => {
       debug(`Error with connection with inserting fake data: \n ${err}`);
+      reject(err);
     });
-};
+});
 
 if (process.env.NODE_ENV !== 'test') {
-  build();
+  build()
+    .then(() => {
+      debug('Done!: database has been built');
+      mongoose.disconnect();
+    });
 }
 
 module.exports = build;
