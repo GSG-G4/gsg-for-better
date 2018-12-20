@@ -22,6 +22,11 @@ describe('testing for Team schema', () => {
     expect(teams).toBeDefined();
     expect(Array.isArray(teams)).toBeTruthy();
 
+    // expect to get array of techonologies
+    expect(teams[0].technologies).toBeDefined();
+    expect(Array.isArray(teams[0].technologies)).toBeTruthy();
+    expect(teams[0].technologies.length).toBe(5);
+
     // expect to get 3 teams [G4-AFAR, ILA, KMA]
     expect(teams.length).toBe(3);
 
