@@ -1,15 +1,18 @@
+/* eslint-disable no-underscore-dangle */
 const User = require('../models/user');
+const Team = require('../models/team');
+
 
 // Get Team Id by team's name
-const getTeamId = async (teamName) => {
-  const team = await User.findOne({ name: teamName });
-  // eslint-disable-next-line no-underscore-dangle
-  return team._id;
+const getTeam = (teamName) => {
+  const team = Team.findOne({ name: teamName });
+  return team;
 };
 
+
 const insertUsers = () => new Promise(async (resolve) => {
-  // Get the first team Id
-  const team1ID = getTeamId('G4-AFAR');
+  // Get the first team
+  const team1 = await getTeam('G4-AFAR');
 
   // first team members
   const team1Members = [
@@ -18,35 +21,36 @@ const insertUsers = () => new Promise(async (resolve) => {
       email: 'ramyshurafa@hotmail.com',
       role: 'member',
       profileImage: 'https://avatars3.githubusercontent.com/u/34629478?s=460&v=4',
-      team: team1ID,
+      team: team1,
     },
     {
       githubHandler: 'ashatat',
       email: 'a.shatat@hotmail.com',
       role: 'member',
       profileImage: 'https://avatars1.githubusercontent.com/u/18149438?s=460&v=4',
-      team: team1ID,
+      team: team1,
     },
     {
       githubHandler: 'FarahZaqout',
       email: 'farah.zaqout@gmail.com',
       role: 'member',
       profileImage: 'https://avatars1.githubusercontent.com/u/25854070?s=400&v=4',
-      team: team1ID,
+      team: team1,
     },
     {
-      githubHandler: 'FarahZaqout',
-      email: 'farah.zaqout@gmail.com',
+      githubHandler: 'amusameh',
+      email: 'abdalsamad.y.m@gmail.com',
       role: 'member',
-      profileImage: 'https://avatars1.githubusercontent.com/u/25854070?s=400&v=4',
-      team: team1ID,
+      profileImage: 'https://avatars3.githubusercontent.com/u/28042978?s=400&v=4',
+      team: team1,
     },
   ];
 
   await User.insertMany(team1Members);
 
-  // Get second team Id
-  const team2ID = getTeamId('ILA');
+
+  // Get second team
+  const team2 = await getTeam('ILA');
 
   // Second team members
   const team2Members = [
@@ -55,25 +59,26 @@ const insertUsers = () => new Promise(async (resolve) => {
       email: 'ali-7@hotmail.com',
       role: 'member',
       profileImage: 'https://avatars0.githubusercontent.com/u/36124895?s=460&v=4',
-      team: team2ID,
+      team: team2,
     },
     {
       githubHandler: 'lubnaabd',
       email: 'lubnaabd@hotmail.com',
       role: 'member',
       profileImage: 'https://avatars1.githubusercontent.com/u/26024284?s=460&v=4',
-      team: team2ID,
+      team: team2,
     },
     {
       githubHandler: 'HemaSAli',
       email: 'HemaSAli@hotmail.com',
       role: 'member',
       profileImage: 'https://avatars3.githubusercontent.com/u/34215823?s=460&v=4',
-      team: team2ID,
+      team: team2,
     },
   ];
 
   await User.insertMany(team2Members);
+
 
   // add guest user
   const guest = {
@@ -81,10 +86,10 @@ const insertUsers = () => new Promise(async (resolve) => {
     email: 'ishak52@hotmail.com',
     role: 'guest',
     profileImage: 'https://avatars0.githubusercontent.com/u/34238574?s=460&v=4',
-    team: team2ID,
   };
 
-  await User.insert(guest);
+  await User.create(guest);
+
 
   // add admin user
   const admin = {
@@ -92,9 +97,9 @@ const insertUsers = () => new Promise(async (resolve) => {
     email: 'MohammedYehia@hotmail.com',
     role: 'admin',
     profileImage: 'https://avatars0.githubusercontent.com/u/7594617?s=460&v=4',
-    team: team2ID,
   };
-  await User.insert(admin);
+
+  await User.create(admin);
 
   resolve();
 });
