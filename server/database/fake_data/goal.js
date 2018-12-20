@@ -4,7 +4,7 @@ const Technology = require('../models/technology');
 
 const technologyId = async (techName) => {
   const technology = await Technology.findOne({ name: techName });
-  return technology._id; // eslint-disable-line no-underscore-dangle
+  return technology;
 };
 
 module.exports = () => new Promise(async (resolve) => {
