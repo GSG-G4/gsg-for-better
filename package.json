@@ -9,7 +9,7 @@
     "start": "cd server && cross-env DEBUG=gfb node ./index",
     "server:dev": "cd server && cross-env DEBUG=gfb nodemon ./index",
     "heroku-postbuild": "cd client && npm install && npm run build",
-    "server:test": "cross-env NODE_ENV=test jest --forceExit --runInBand --detectOpenHandles",
+    "server:test": "cross-env NODE_ENV=test jest --runInBand --detectOpenHandles",
     "build-db": "cross-env DEBUG=database node server/database/fake_data/index.js"
   },
   "dependencies": {
