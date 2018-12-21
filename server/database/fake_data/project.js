@@ -13,14 +13,15 @@ const teamInfo = async (teamName) => {
 // takes a tech name, find all goals with not-done status for that tech as well as the tech.id
 const relevantGoals = async (techName) => {
   const techId = await Technology.findOne({ name: techName });
-  const GoalsNotDone = await Progress.find({ status: 'Not Done' })
+  const goalsNotDone = await Progress.find({ status: 'Not Done' })
     .populate({
       path: 'goals', // specifies schema to pull values from.
       match: { technology: techId.id }, // which value to look for.
       select: 'technology', // which key to select in the document object.
     });
   const setOfGoalIds = () => {
-    const arrayOfGoals = GoalsNotDone.map(element => element.goal);
+    // returns only the goal key from the progress array (goalsNotDone)
+    const arrayOfGoals = goalsNotDone.map(element => element.goal);
     const uniqueIds = {};
     arrayOfGoals.filter((element) => {
       uniqueIds[element] = element;
