@@ -24,7 +24,7 @@ const build = () => new Promise((resolve, reject) => {
       await proposedGoalFakeData();
       await goalsData();
       await progressData();
-      await projectData('express');
+      await projectData();
     })
     .then(resolve)
     .catch((err) => {
