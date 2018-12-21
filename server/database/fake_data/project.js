@@ -28,6 +28,8 @@ const relevantGoals = async (techName) => {
       uniqueIds[element] = element;
       return null;
     });
+
+    // creates an array containing only the unduplicated ids of goals.
     const arrayOfUniqueIds = Object.keys(uniqueIds);
     return arrayOfUniqueIds;
   };
