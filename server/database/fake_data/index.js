@@ -7,6 +7,7 @@ const technologyFakeData = require('./technology');
 const teamFakeData = require('./team');
 const goalsData = require('./goal');
 const userFakeData = require('./user');
+const proposedGoalFakeData = require('./proposed_goal');
 const progressData = require('./progress');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
@@ -19,6 +20,7 @@ const build = () => new Promise((resolve, reject) => {
       await technologyFakeData();
       await teamFakeData();
       await userFakeData();
+      await proposedGoalFakeData();
       await goalsData();
       await progressData();
     })
