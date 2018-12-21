@@ -8,6 +8,7 @@ const teamFakeData = require('./team');
 const goalsData = require('./goal');
 const userFakeData = require('./user');
 const progressData = require('./progress');
+const projectData = require('./project');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const dbConnection = require('./../db_connection');
@@ -21,6 +22,7 @@ const build = () => new Promise((resolve, reject) => {
       await userFakeData();
       await goalsData();
       await progressData();
+      await projectData('express');
     })
     .then(resolve)
     .catch((err) => {

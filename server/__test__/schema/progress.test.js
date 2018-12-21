@@ -17,6 +17,6 @@ describe('testing progress model', () => {
 
     // progress has 6 entries
     expect(progress.length).toBe(6);
-    expect(progress[0].status).toBe('Done');
+    expect(progress[0].status).toBe('Not Done');
   });
 });
