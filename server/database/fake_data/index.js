@@ -6,6 +6,7 @@ const resetFakeData = require('./delete_fake_data');
 const technologyFakeData = require('./technology');
 const teamFakeData = require('./team');
 const userFakeData = require('./user');
+const commentFakeData = require('./comment');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const dbConnection = require('./../db_connection');
@@ -17,6 +18,7 @@ const build = () => new Promise((resolve, reject) => {
       await technologyFakeData();
       await teamFakeData();
       await userFakeData();
+      await commentFakeData();
     })
     .then(resolve)
     .catch((err) => {
