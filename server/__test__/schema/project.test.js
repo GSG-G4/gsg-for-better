@@ -13,10 +13,12 @@ describe('testing project model', () => {
 
   test('project schema interacts as intended', async () => {
     const projects = await Project.find({});
-    expect(projects).toBeDefined();   
+    expect(projects).toBeDefined();
     // progress has 6 entries
     expect(projects.length).toBe(3);
     expect(projects[0].projectStatus).toBe('Done');
     expect(projects[2].projectStatus).toBe('In progress');
+    expect(Array.isArray(projects[0].technologies)).toBeTruthy();
+    expect(projects[0].technologies.length).toBe(5);
   });
 });
