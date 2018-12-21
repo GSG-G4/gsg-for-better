@@ -22,8 +22,9 @@ const relevantGoals = async (techName) => {
   const setOfGoalIds = () => {
     // returns only the goal key from the progress array (goalsNotDone)
     const arrayOfGoals = goalsNotDone.map(element => element.goal);
+    // creates an empty object to assign unique keys and ids to it.
     const uniqueIds = {};
-    arrayOfGoals.filter((element) => {
+    arrayOfGoals.forEach((element) => {
       uniqueIds[element] = element;
       return null;
     });
