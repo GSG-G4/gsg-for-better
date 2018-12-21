@@ -1,21 +1,7 @@
 const Project = require('../models/project');
-const Goal = require('../models/goal');
 const Technology = require('../models/technology');
 const Progress = require('../models/progress');
 const Team = require('../models/team');
-
-// githubLink: String,
-// projectSite: String,
-// projectStatus: String,
-// previewImage: String,
-// description: String,
-// technologies: array will be inserted by the user.
-// team: id;
-// goals: array
-
-// retrieves goals that have a progress status of not done, and a certain tech (based on tech name);
-
-// query should take tech name, find all goals with not-done status and that tech id
 
 // get teamId based on teamName
 const teamInfo = async (teamName) => {
@@ -24,7 +10,7 @@ const teamInfo = async (teamName) => {
   return teamData;
 };
 
-// gets all goals with in progress status based on tech name
+// takes a tech name, find all goals with not-done status for that tech as well as the tech.id
 const relevantGoals = async (techName) => {
   const techId = await Technology.findOne({ name: techName });
   const GoalsNotDone = await Progress.find({ status: 'Not Done' })
@@ -36,7 +22,10 @@ const relevantGoals = async (techName) => {
   const setOfGoalIds = () => {
     const arrayOfGoals = GoalsNotDone.map(element => element.goal);
     const uniqueIds = {};
-    arrayOfGoals.filter(element => uniqueIds[element] = element);
+    arrayOfGoals.filter((element) => {
+      uniqueIds[element] = element;
+      return null;
+    });
     const arrayOfUniqueIds = Object.keys(uniqueIds);
     return arrayOfUniqueIds;
   };
