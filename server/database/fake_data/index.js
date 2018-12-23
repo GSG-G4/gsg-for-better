@@ -9,6 +9,8 @@ const goalsData = require('./goal');
 const userFakeData = require('./user');
 const proposedGoalFakeData = require('./proposed_goal');
 const progressData = require('./progress');
+const projectData = require('./project');
+const timelineData = require('./timeline');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const dbConnection = require('./../db_connection');
@@ -23,6 +25,8 @@ const build = () => new Promise((resolve, reject) => {
       await proposedGoalFakeData();
       await goalsData();
       await progressData();
+      await projectData();
+      await timelineData();
     })
     .then(resolve)
     .catch((err) => {

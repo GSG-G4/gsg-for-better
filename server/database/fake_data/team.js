@@ -7,8 +7,8 @@ module.exports = () => new Promise((resolve, reject) => {
       const technologiesIds = technologies.map(tech => tech.id);
       resolve(Team.insertMany([
         { name: 'G4-AFAR', technologies: technologiesIds },
-        { name: 'ILA', echnologies: technologiesIds },
-        { name: 'KMA', echnologies: technologiesIds },
+        { name: 'ILA', technologies: technologiesIds },
+        { name: 'KMA', technologies: technologiesIds },
       ]));
     }).catch(reject);
 });
