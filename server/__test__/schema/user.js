@@ -4,7 +4,6 @@ const buildFakeData = require('../../database/fake_data');
 const User = require('../../database/models/user');
 const Team = require('../../database/models/team');
 
-// const Technology = require('../../database/models/technology');
 
 describe('testing for User schema', () => {
   beforeEach(async () => {

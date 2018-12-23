@@ -7,6 +7,7 @@ const technologyFakeData = require('./technology');
 const teamFakeData = require('./team');
 const goalsData = require('./goal');
 const userFakeData = require('./user');
+const commentFakeData = require('./comment');
 const proposedGoalFakeData = require('./proposed_goal');
 const progressData = require('./progress');
 const stagedActionData = require('./staged_action');
@@ -23,6 +24,7 @@ const build = () => new Promise((resolve, reject) => {
       await technologyFakeData();
       await teamFakeData();
       await userFakeData();
+      await commentFakeData();
       await proposedGoalFakeData();
       await goalsData();
       await progressData();
