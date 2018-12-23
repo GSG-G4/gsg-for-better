@@ -5,6 +5,7 @@ const proposedGoal = require('../models/proposed_goal');
 const Goal = require('../models/goal');
 const Progress = require('../models/progress');
 const Project = require('../models/project');
+const Timeline = require('../models/timeline');
 
 const resetFakeData = async () => {
   await Technology.deleteMany();
@@ -13,6 +14,7 @@ const resetFakeData = async () => {
   await User.deleteMany();
   await proposedGoal.deleteMany();
   await Progress.deleteMany();
+  await Timeline.deleteMany();
   await Project.deleteMany();
 };
 
