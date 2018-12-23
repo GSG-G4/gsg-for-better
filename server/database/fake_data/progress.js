@@ -21,7 +21,7 @@ module.exports = () => new Promise(async (resolve) => {
 
   const progressArray = [
     {
-      status: 'Done',
+      status: 'Not Done',
       user: farahId,
       goal: expressGoalId,
     },
