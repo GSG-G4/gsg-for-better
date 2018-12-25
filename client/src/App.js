@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import LandingPage from './components/LandingPage';
 
 class App extends Component {
   state = {};
 
   render() {
-    return (
-      <div className="App">
-        <h1>Landing page</h1>
-      </div>
-    );
+    return <LandingPage />;
   }
 }
 
