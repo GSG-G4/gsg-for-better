@@ -23,6 +23,10 @@ const UserSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'teams',
   },
+  specialty: {
+    type: String,
+    required: true,
+  },
 });
 
 const User = model('users', UserSchema);
