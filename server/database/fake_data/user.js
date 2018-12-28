@@ -17,6 +17,7 @@ const insertUsers = () => new Promise(async (resolve) => {
   // first team members
   const team1Members = [
     {
+      name: 'Ramy Al Shurafa',
       githubHandler: 'RamyAlshurafa',
       email: 'ramyshurafa@hotmail.com',
       role: 'member',
@@ -25,6 +26,7 @@ const insertUsers = () => new Promise(async (resolve) => {
       specialty: 'full-stack web developer',
     },
     {
+      name: 'Ahmed Shatat',
       githubHandler: 'ashatat',
       email: 'a.shatat@hotmail.com',
       role: 'member',
@@ -33,6 +35,7 @@ const insertUsers = () => new Promise(async (resolve) => {
       specialty: 'full-stack web developer',
     },
     {
+      name: 'Farah Zaqout',
       githubHandler: 'FarahZaqout',
       email: 'farah.zaqout@gmail.com',
       role: 'member',
@@ -41,6 +44,7 @@ const insertUsers = () => new Promise(async (resolve) => {
       specialty: 'full-stack web developer',
     },
     {
+      name: 'AbdAlsamad Abu Musameh',
       githubHandler: 'amusameh',
       email: 'abdalsamad.y.m@gmail.com',
       role: 'member',
