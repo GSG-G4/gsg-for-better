@@ -33,6 +33,7 @@ export const CardImage = styled.img`
 export const UserName = styled.h1`
   font-size: 24px;
   color: #fff;
+  text-transform: capitalize;
 `;
 
 export const UserSpecialty = styled.h2`
