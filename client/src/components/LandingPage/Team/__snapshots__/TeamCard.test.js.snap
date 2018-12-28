@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing for TeamCard component 1`] = `
+<div
+  className="sc-bdVaJa mdupv"
+>
+  <div
+    className="sc-bwzfXH hqawGO"
+  >
+    <img
+      className="sc-htpNat jvkVJd"
+      src="https://avatars3.githubusercontent.com/u/34629478?s=460&v=4"
+    />
+  </div>
+  <h1
+    className="sc-bxivhb jcTKvB"
+  >
+    Ramy A Shurafa
+  </h1>
+  <h2
+    className="sc-ifAKCX hhiBCA"
+  >
+    Full-Stack Web Developer
+  </h2>
+</div>
+`;
