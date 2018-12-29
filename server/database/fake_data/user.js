@@ -17,32 +17,40 @@ const insertUsers = () => new Promise(async (resolve) => {
   // first team members
   const team1Members = [
     {
+      name: 'Ramy Al Shurafa',
       githubHandler: 'RamyAlshurafa',
       email: 'ramyshurafa@hotmail.com',
       role: 'member',
       profileImage: 'https://avatars3.githubusercontent.com/u/34629478?s=460&v=4',
       team: team1,
+      specialty: 'full-stack web developer',
     },
     {
+      name: 'Ahmed Shatat',
       githubHandler: 'ashatat',
       email: 'a.shatat@hotmail.com',
       role: 'member',
       profileImage: 'https://avatars1.githubusercontent.com/u/18149438?s=460&v=4',
       team: team1,
+      specialty: 'full-stack web developer',
     },
     {
+      name: 'Farah Zaqout',
       githubHandler: 'FarahZaqout',
       email: 'farah.zaqout@gmail.com',
       role: 'member',
       profileImage: 'https://avatars1.githubusercontent.com/u/25854070?s=400&v=4',
       team: team1,
+      specialty: 'full-stack web developer',
     },
     {
+      name: 'AbdAlsamad Abu Musameh',
       githubHandler: 'amusameh',
       email: 'abdalsamad.y.m@gmail.com',
       role: 'member',
       profileImage: 'https://avatars3.githubusercontent.com/u/28042978?s=400&v=4',
       team: team1,
+      specialty: 'full-stack web developer',
     },
   ];
 
@@ -60,6 +68,7 @@ const insertUsers = () => new Promise(async (resolve) => {
       role: 'member',
       profileImage: 'https://avatars0.githubusercontent.com/u/36124895?s=460&v=4',
       team: team2,
+      specialty: 'full-stack web developer',
     },
     {
       githubHandler: 'lubnaabd',
@@ -67,6 +76,7 @@ const insertUsers = () => new Promise(async (resolve) => {
       role: 'member',
       profileImage: 'https://avatars1.githubusercontent.com/u/26024284?s=460&v=4',
       team: team2,
+      specialty: 'full-stack web developer',
     },
     {
       githubHandler: 'HemaSAli',
@@ -74,6 +84,7 @@ const insertUsers = () => new Promise(async (resolve) => {
       role: 'member',
       profileImage: 'https://avatars3.githubusercontent.com/u/34215823?s=460&v=4',
       team: team2,
+      specialty: 'full-stack web developer',
     },
   ];
 
@@ -86,6 +97,7 @@ const insertUsers = () => new Promise(async (resolve) => {
     email: 'ishak52@hotmail.com',
     role: 'guest',
     profileImage: 'https://avatars0.githubusercontent.com/u/34238574?s=460&v=4',
+    specialty: 'full-stack web developer',
   };
 
   await User.create(guest);
@@ -97,6 +109,7 @@ const insertUsers = () => new Promise(async (resolve) => {
     email: 'MohammedYehia@hotmail.com',
     role: 'admin',
     profileImage: 'https://avatars0.githubusercontent.com/u/7594617?s=460&v=4',
+    specialty: 'full-stack web developer',
   };
 
   await User.create(admin);

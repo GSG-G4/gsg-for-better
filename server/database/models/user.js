@@ -9,6 +9,9 @@ const UserSchema = new Schema({
     unique: true,
     required: true,
   },
+  name: {
+    type: String,
+  },
   email: {
     type: String,
     unique: true,
@@ -22,6 +25,10 @@ const UserSchema = new Schema({
   team: {
     type: Schema.Types.ObjectId,
     ref: 'teams',
+  },
+  specialty: {
+    type: String,
+    required: true,
   },
 });
 
