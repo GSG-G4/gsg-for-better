@@ -4,9 +4,10 @@ import styled from 'styled-components';
 export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 273px;
+  width: 240px;
   font-family: 'Wallpoet', cursive;
   text-align: center;
+  margin: 27px 9%;
 `;
 
 export const ImageContainer = styled.div`
@@ -34,6 +35,7 @@ export const UserName = styled.h1`
   font-size: 24px;
   color: #fff;
   text-transform: capitalize;
+  margin-bottom: 5px;
 `;
 
 export const UserSpecialty = styled.h2`
