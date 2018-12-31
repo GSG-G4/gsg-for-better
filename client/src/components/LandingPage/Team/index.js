@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import fetchTeamMembers from '../../../actions/fetch_team_members';
+import fetchTeamMembersAction from '../../../actions/fetch_team_members';
 
 import TeamCard from './TeamCard';
 
@@ -16,9 +16,22 @@ import {
 import TeamHeaderImage from './team_header.png';
 
 class Team extends Component {
+  state = {
+    teamMembers: [],
+  };
+
   componentDidMount() {
-    this.props.fetchTeamMembers(111);
+    const { fetchTeamMembers } = this.props;
+    fetchTeamMembers(111);
   }
+
+  componentDidUpdate = prevProps => {
+    const { teamMembers } = this.props;
+    const { teamMembers: oldTeamMembers } = this.state;
+    if (prevProps.teamMembers !== oldTeamMembers) {
+      this.setState({ teamMembers });
+    }
+  };
 
   render() {
     return (
@@ -33,8 +46,8 @@ class Team extends Component {
   }
 }
 
-const mapStateToProps = state => ({ teamMembers: state.team.members });
-const mapDispatchToProps = { fetchTeamMembers };
+const mapStateToProps = state => ({ teamMembers: state.teams.members });
+const mapDispatchToProps = { fetchTeamMembers: fetchTeamMembersAction };
 
 export default connect(
   mapStateToProps,

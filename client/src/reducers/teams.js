@@ -1,10 +1,22 @@
 import { GET_TEAM_MEMBERS } from '../constants/actionTypes';
 
 const initialState = {
-  members: [],
+  currentTeam: {
+    members: [],
+  },
 };
 
 const teamsReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case GET_TEAM_MEMBERS:
+      return {
+        ...state,
+        currentTeam: {
+          members: action.data,
+        },
+      };
+    default:
+      return state;
+  }
 };
 export default teamsReducer;

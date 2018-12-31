@@ -5,7 +5,7 @@ import teamReducer from './teams';
 
 const appReducer = combineReducers({
   users: userReducer,
-  team: teamReducer,
+  teams: teamReducer,
 });
 
 export default appReducer;
