@@ -20,12 +20,6 @@ class Team extends Component {
   state = {
     teamMembers: [],
   };
-  // githubHandler: 'lubnaabd',
-  // email: 'lubnaabd@hotmail.com',
-  // role: 'member',
-  // profileImage: 'https://avatars1.githubusercontent.com/u/26024284?s=460&v=4',
-  // team: team2,
-  // specialty: 'full-stack web developer',
 
   static propTypes = {
     fetchTeamMembers: PropTypes.func.isRequired,
