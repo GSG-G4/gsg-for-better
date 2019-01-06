@@ -2,10 +2,10 @@
 
 exports[`Testing for TeamCard component 1`] = `
 <div
-  className="sc-bdVaJa mdupv"
+  className="sc-bdVaJa joJjbd"
 >
   <div
-    className="sc-bwzfXH hqawGO"
+    className="sc-bwzfXH bPzlnP"
   >
     <img
       className="sc-htpNat jvkVJd"
@@ -13,7 +13,7 @@ exports[`Testing for TeamCard component 1`] = `
     />
   </div>
   <h1
-    className="sc-bxivhb jcTKvB"
+    className="sc-bxivhb gVbMSN"
   >
     Ramy A Shurafa
   </h1>
