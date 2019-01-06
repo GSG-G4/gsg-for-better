@@ -12,6 +12,7 @@ const teamsReducer = (state = initialState, action) => {
       return {
         ...state,
         currentTeam: {
+          ...state.currentTeam
           members: action.data,
         },
       };
