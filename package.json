@@ -10,7 +10,9 @@
     "server:dev": "cd server && cross-env DEBUG=gfb nodemon ./index",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "server:test": "cross-env NODE_ENV=test jest --runInBand --detectOpenHandles",
-    "build-db": "cross-env DEBUG=database node server/database/fake_data/index.js"
+    "build-db": "cross-env DEBUG=database node server/database/fake_data/index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -25,7 +27,8 @@
     "http-errors": "~1.6.2",
     "joi": "^14.3.0",
     "mongoose": "^5.4.0",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "snyk": "^1.258.2"
   },
   "devDependencies": {
     "codecov": "^3.1.0",
@@ -43,5 +46,6 @@
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.0",
     "eslint-config-prettier": "^2.9.0"
-  }
+  },
+  "snyk": true
 }
